@@ -1,4 +1,4 @@
-![strapi-provider-upload-firebase-storage](https://github.com/easonchai/strapi-provider-upload-firebase-storage/hero.png)
+![strapi-provider-upload-firebase-storage](https://github.com/easonchai/strapi-provider-upload-firebase-storage/blob/main/hero.png)
 
 # Firebase Storage Media Library Provider for Strapi
 

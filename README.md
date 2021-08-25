@@ -1,5 +1,7 @@
 # strapi-provider-upload-firebase-storage
 
+The best Strapi Media Library provider for Firebase Storage 🔥
+
 ## Configurations
 
 Your configuration is passed down to the provider. (e.g: `admin.initializeApp()`). You can see the complete list of options [here](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#constructor-property)
@@ -21,8 +23,6 @@ module.exports = ({ env }) => ({
       debug: true,
       uploadOptions: {
         resumable: false,
-        public: false,
-        private: true,
       },
       deleteOptions: {},
     },

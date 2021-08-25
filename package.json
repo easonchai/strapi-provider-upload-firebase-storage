@@ -1,6 +1,6 @@
 {
   "name": "strapi-provider-upload-firebase-storage",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Firebase Storage provider for Strapi Media Library Uploads",
   "directories": {
     "lib": "./lib"

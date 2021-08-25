@@ -114,7 +114,7 @@ By default, all uploads are set to `public`. You can however change those by pas
 | Optional Parameters | Type      | Default Value | Possible Values                                                                                                      |
 | :------------------ | :-------- | :------------ | :------------------------------------------------------------------------------------------------------------------- |
 | `debug`             | _boolean_ | `false`       | `true / false`                                                                                                       |
-| `customBucket`      | _string_  | `""`          | `<BUCKET_NAME>` Only applicable if you use the Spark plan & created a custom bucket                                  |
+| `customBucket`      | _string_  | `undefined`   | `<BUCKET_NAME>` Only applicable if you use the Spark plan & created a custom bucket                                  |
 | `uploadOptions`     | _object_  | `{}`          | Refer to [official documentation](https://googleapis.dev/nodejs/storage/latest/global.html#CreateWriteStreamOptions) |
 | `deleteOptions`     | _object_  | `{}`          | Refer to [official documentation](https://googleapis.dev/nodejs/storage/latest/File.html#delete)                     |
 

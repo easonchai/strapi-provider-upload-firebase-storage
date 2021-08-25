@@ -1,4 +1,4 @@
-<div style="display: flex; align-items:center; justify-content: center;">
+<div style="display: flex; align-items:center; justify-content: center; width: 100%">
   <img src="https://i.ibb.co/Nm9r7ss/bg.png" alt="strapi-provider-upload-firebase-storage">
 </div>
 

@@ -1,6 +1,6 @@
 {
   "name": "strapi-provider-upload-firebase-storage",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Firebase Storage provider for Strapi Media Library Uploads",
   "directories": {
     "lib": "./lib"
@@ -26,7 +26,8 @@
     "provider",
     "upload",
     "media",
-    "library"
+    "library",
+    "media library"
   ],
   "author": "Eason Chai",
   "license": "MIT",

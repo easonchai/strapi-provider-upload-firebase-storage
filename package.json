@@ -1,18 +1,28 @@
 {
-  "name": "strapi-provider-upload-firebase",
+  "name": "strapi-provider-upload-firebase-storage",
   "version": "0.0.1",
   "description": "Firebase provider for Strapi uploads",
-  "main": "index.js",
+  "directories": {
+    "lib": "./lib"
+  },
+  "main": "./lib",
+  "strapi": {
+    "isProvider": true
+  },
+  "maintainers": [
+    "echai2905@gmail.com"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/easonchai/strapi-provider-upload-firebase.git"
+    "url": "git+https://github.com/easonchai/strapi-provider-upload-firebase-storage.git"
   },
   "keywords": [
     "strapi",
     "firebase",
+    "storage",
     "provider",
     "upload",
     "media",
@@ -21,7 +31,10 @@
   "author": "Eason Chai",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/easonchai/strapi-provider-upload-firebase/issues"
+    "url": "https://github.com/easonchai/strapi-provider-upload-firebase-storage/issues"
   },
-  "homepage": "https://github.com/easonchai/strapi-provider-upload-firebase#readme"
+  "homepage": "https://github.com/easonchai/strapi-provider-upload-firebase-storage#readme",
+  "dependencies": {
+    "firebase-admin": "^9.11.1"
+  }
 }

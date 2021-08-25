@@ -3,6 +3,8 @@
 # Firebase Storage Media Library Provider for Strapi
 
 The best Strapi Media Library provider for Firebase Storage 🔥
+<br>
+Supports custom Firebase Storage buckets for Spark plan users.
 
 <br>
 
@@ -72,7 +74,7 @@ You should add your service account key (.json file) in your .gitignore to preve
 
 That is all it takes to upload your images to Firebase storage via Strapi! 🎊
 
-If you need help finding your service account key or bucket name, refer to the [FAQ section](#-faq-section) below.
+If you need help finding your service account key or bucket name, refer to the [FAQ section](#faq-section) below.
 
 <br>
 
@@ -94,6 +96,7 @@ module.exports = ({ env }) => ({
     providerOptions: {
       serviceAccount: require(env("SERVICE_ACCOUNT_KEY_PATH")),
       bucketUrl: env("STORAGE_BUCKET_URL"),
+      customBucket: "my-custom-bucket",
       debug: true,
       uploadOptions: {
         resumable: false,
@@ -111,6 +114,7 @@ By default, all uploads are set to `public`. You can however change those by pas
 | Optional Parameters | Type      | Default Value | Possible Values                                                                                                      |
 | :------------------ | :-------- | :------------ | :------------------------------------------------------------------------------------------------------------------- |
 | `debug`             | _boolean_ | `false`       | `true / false`                                                                                                       |
+| `customBucket`      | _string_  | `""`          | `<BUCKET_NAME>` Only applicable if you use the Spark plan & created a custom bucket                                  |
 | `uploadOptions`     | _object_  | `{}`          | Refer to [official documentation](https://googleapis.dev/nodejs/storage/latest/global.html#CreateWriteStreamOptions) |
 | `deleteOptions`     | _object_  | `{}`          | Refer to [official documentation](https://googleapis.dev/nodejs/storage/latest/File.html#delete)                     |
 

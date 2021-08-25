@@ -1,3 +1,5 @@
+![strapi-provider-upload-firebase-storage](https://github.com/easonchai/strapi-provider-upload-firebase-storage/hero.png)
+
 # Firebase Storage Media Library Provider for Strapi
 
 The best Strapi Media Library provider for Firebase Storage 🔥
@@ -8,6 +10,8 @@ The best Strapi Media Library provider for Firebase Storage 🔥
 - [Configurations](#configurations)
 - [FAQ Section](#faq-section)
 - [Contributions](#contributions)
+
+<br>
 
 ## Getting Started
 
@@ -66,6 +70,8 @@ That is all it takes to upload your images to Firebase storage via Strapi! 🎊
 
 If you need help finding your service account key or bucket name, refer to the [FAQ section](#-faq-section) below.
 
+<br>
+
 ## Configurations
 
 Your configuration is passed down to the provider. (e.g: `admin.initializeApp()`). Currently, it only passes in the service account credentials and databaseURL. You can see the complete list of options [here](https://firebase.google.com/docs/database/admin/start).
@@ -104,6 +110,8 @@ By default, all uploads are set to `public`. You can however change those by pas
 | `uploadOptions`     | _object_  | `{}`          | Refer to [official documentation](https://googleapis.dev/nodejs/storage/latest/global.html#CreateWriteStreamOptions) |
 | `deleteOptions`     | _object_  | `{}`          | Refer to [official documentation](https://googleapis.dev/nodejs/storage/latest/File.html#delete)                     |
 
+<br>
+
 ## FAQ Section
 
 <br>
@@ -120,6 +128,8 @@ By default, all uploads are set to `public`. You can however change those by pas
 3. I keep getting an error `Cannot find module './SERVICE_ACCOUNT_KEY_NAME.json'`.
 
 - The file path is relative to your `./config/plugins.js`. So if your .env is in the root of your repo (it usually is), your path will be `../<SERVICE_ACCOUNT_KEY_NAME>.json`
+
+<br>
 
 ## Contributions
 

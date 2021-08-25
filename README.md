@@ -4,6 +4,8 @@
 
 The best Strapi Media Library provider for Firebase Storage 🔥
 
+<br>
+
 ## 📝 Table of Contents
 
 - [Getting Started](#getting-started)
@@ -19,7 +21,9 @@ To install the package, you can either use npm or yarn
 
 ```bash
 npm i strapi-provider-upload-firebase-storage
+
 # or
+
 yarn add strapi-provider-upload-firebase-storage
 ```
 

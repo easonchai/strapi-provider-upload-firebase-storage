@@ -33,7 +33,6 @@ module.exports = ({ env }) => ({
     providerOptions: {
       serviceAccount: require(env("SERVICE_ACCOUNT_KEY_PATH")),
       bucketUrl: env("STORAGE_BUCKET_URL"),
-      debug: true,
       uploadOptions: {},
       deleteOptions: {},
     },
@@ -69,9 +68,9 @@ If you need help finding your service account key or bucket name, refer to the [
 
 ## Configurations
 
-Your configuration is passed down to the provider. (e.g: `admin.initializeApp()`). You can see the complete list of options [here](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#constructor-property)
+Your configuration is passed down to the provider. (e.g: `admin.initializeApp()`). Currently, it only passes in the service account credentials and databaseURL. You can see the complete list of options [here](https://firebase.google.com/docs/database/admin/start).
 
-See the [using a provider](https://strapi.io/documentation/developer-docs/latest/development/plugins/upload.html#using-a-provider) documentation for information on installing and using a provider. And see the [environment variables](https://strapi.io/documentation/developer-docs/latest/setup-deployment-guides/configurations.html#environment-variables) for setting and using environment variables in your configs.
+There are a few additional configurations that you can pass into the provider. You can view all the optional [upload options here](https://googleapis.dev/nodejs/storage/latest/global.html#CreateWriteStreamOptions) and [delete options here](https://googleapis.dev/nodejs/storage/latest/File.html#delete).
 
 **Example**
 
@@ -88,6 +87,7 @@ module.exports = ({ env }) => ({
       debug: true,
       uploadOptions: {
         resumable: false,
+        private: true,
       },
       deleteOptions: {},
     },
@@ -95,6 +95,14 @@ module.exports = ({ env }) => ({
   // ...
 });
 ```
+
+By default, all uploads are set to `public`. You can however change those by passing in the options into the `uploadOptions` object. Below is an example of additional options you can pass in.
+
+| Optional Parameters | Type      | Default Value | Possible Values                                                                                                      |
+| :------------------ | :-------- | :------------ | :------------------------------------------------------------------------------------------------------------------- |
+| `debug`             | _boolean_ | `false`       | `true / false`                                                                                                       |
+| `uploadOptions`     | _object_  | `{}`          | Refer to [official documentation](https://googleapis.dev/nodejs/storage/latest/global.html#CreateWriteStreamOptions) |
+| `deleteOptions`     | _object_  | `{}`          | Refer to [official documentation](https://googleapis.dev/nodejs/storage/latest/File.html#delete)                     |
 
 ## FAQ Section
 

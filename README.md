@@ -4,10 +4,10 @@ The best Strapi Media Library provider for Firebase Storage 🔥
 
 ## 📝 Table of Contents
 
-- [Getting Started](#-getting-started)
-- [Configurations](#-configurations)
-- [FAQ Section](#-faq)
-- [Contributions](#-contributions)
+- [Getting Started](#getting-started)
+- [Configurations](#configurations)
+- [FAQ Section](#faq-section)
+- [Contributions](#contributions)
 
 ## Getting Started
 
@@ -34,9 +34,7 @@ module.exports = ({ env }) => ({
       serviceAccount: require(env("SERVICE_ACCOUNT_KEY_PATH")),
       bucketUrl: env("STORAGE_BUCKET_URL"),
       debug: true,
-      uploadOptions: {
-        resumable: false,
-      },
+      uploadOptions: {},
       deleteOptions: {},
     },
   },
@@ -67,7 +65,7 @@ You should add your service account key (.json file) in your .gitignore to preve
 
 That is all it takes to upload your images to Firebase storage via Strapi! 🎊
 
-If you need help finding your service account key or bucket name, refer to the [FAQ section](#-faq) below.
+If you need help finding your service account key or bucket name, refer to the [FAQ section](#-faq-section) below.
 
 ## Configurations
 
@@ -98,11 +96,12 @@ module.exports = ({ env }) => ({
 });
 ```
 
-## FAQ Section (Frequently Asked Questions)
+## FAQ Section
 
+<br>
 1. Where can I get the service account key?
 
-- The service account key can be created by going to your Firebase console → Project settings → Service account → Click "Generate new private key". Then save that file anywhere safe.
+- The service account key can be created by going to your Firebase console → Project settings → Service account → Click "Generate new private key". Then save that file anywhere safe. If saving in your repo, remember to add it into .gitignore!
 
 <br>
 2. Where can I get the storage bucket url?
@@ -110,7 +109,7 @@ module.exports = ({ env }) => ({
 - Go to your Firebase console → Project settings → Storage → Click "Get Started" (if its your first time setting up Firebase Storage for the project) → Copy the URL that looks like `gs://<PROJECT_NAME>.appspot.com` omitting the prefixed `gs://`.
 
 <br>
-3. I keep getting an error `Cannot find module './<SERVICE_ACCOUNT_KEY_PATH>.json'`.
+3. I keep getting an error `Cannot find module './SERVICE_ACCOUNT_KEY_NAME.json'`.
 
 - The file path is relative to your `./config/plugins.js`. So if your .env is in the root of your repo (it usually is), your path will be `../<SERVICE_ACCOUNT_KEY_NAME>.json`
 

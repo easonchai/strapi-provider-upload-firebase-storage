@@ -13,7 +13,7 @@
     "echai2905@gmail.com"
   ],
   "scripts": {
-    "test": "jest"
+    "test": "jest --setupFiles dotenv/config"
   },
   "repository": {
     "type": "git",
@@ -42,6 +42,7 @@
     "firebase-admin": "^9.11.1"
   },
   "devDependencies": {
+    "dotenv": "^10.0.0",
     "jest": "^27.1.0"
   }
 }

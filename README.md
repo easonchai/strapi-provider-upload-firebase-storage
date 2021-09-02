@@ -14,6 +14,7 @@ Supports custom Firebase Storage buckets for Spark plan users.
 
 - [Getting Started](#getting-started)
 - [Configurations](#configurations)
+- [Status](#status)
 - [FAQ Section](#faq-section)
 - [Contributions](#contributions)
 
@@ -119,6 +120,12 @@ By default, all uploads are set to `public`. You can however change those by pas
 | `customBucket`      | _string_  | `undefined`   | `<BUCKET_NAME>` Only applicable if you use the Spark plan & created a custom bucket                                  |
 | `uploadOptions`     | _object_  | `{}`          | Refer to [official documentation](https://googleapis.dev/nodejs/storage/latest/global.html#CreateWriteStreamOptions) |
 | `deleteOptions`     | _object_  | `{}`          | Refer to [official documentation](https://googleapis.dev/nodejs/storage/latest/File.html#delete)                     |
+
+<br>
+
+## Status
+
+![CI](https://github.com/easonchai/strapi-provider-upload-firebase/actions/workflows/ci.yml/badge.svg)
 
 <br>
 

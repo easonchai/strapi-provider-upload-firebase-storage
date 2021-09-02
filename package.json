@@ -13,7 +13,7 @@
     "echai2905@gmail.com"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -40,5 +40,8 @@
   "homepage": "https://github.com/easonchai/strapi-provider-upload-firebase-storage#readme",
   "dependencies": {
     "firebase-admin": "^9.11.1"
+  },
+  "devDependencies": {
+    "jest": "^27.1.0"
   }
 }

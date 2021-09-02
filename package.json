@@ -19,6 +19,9 @@
     "type": "git",
     "url": "git+https://github.com/easonchai/strapi-provider-upload-firebase-storage.git"
   },
+  "files": [
+    "lib"
+  ],
   "keywords": [
     "strapi",
     "firebase",

@@ -13,7 +13,8 @@
     "echai2905@gmail.com"
   ],
   "scripts": {
-    "test": "jest --setupFiles dotenv/config"
+    "test": "jest --setupFiles dotenv/config",
+    "lint": "eslint .  --ext .js"
   },
   "repository": {
     "type": "git",
@@ -43,6 +44,7 @@
   },
   "devDependencies": {
     "dotenv": "^10.0.0",
+    "eslint": "^7.32.0",
     "jest": "^27.1.0"
   }
 }

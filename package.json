@@ -14,7 +14,8 @@
   ],
   "scripts": {
     "test": "jest --setupFiles dotenv/config",
-    "lint": "eslint .  --ext .js"
+    "lint": "eslint .  --ext .js",
+    "coverage": "jest --collect-coverage --setupFiles dotenv/config"
   },
   "repository": {
     "type": "git",

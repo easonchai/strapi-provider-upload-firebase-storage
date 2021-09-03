@@ -44,7 +44,7 @@ module.exports = ({ env }) => ({
   upload: {
     provider: "firebase-storage",
     providerOptions: {
-      serviceAccount: require(env("SERVICE_ACCOUNT_KEY_PATH")),
+      serviceAccount: require("./SERVICE_ACCOUNT_KEY_PATH.json"),
       bucketUrl: env("STORAGE_BUCKET_URL"),
       uploadOptions: {},
       deleteOptions: {},
@@ -61,14 +61,12 @@ There are two environment variables you need to create in your `.env`.
 `.env`
 
 ```env
-SERVICE_ACCOUNT_KEY_PATH='../serviceAccountKey.json'
 STORAGE_BUCKET_URL=<PROJECT_NAME>.appspot.com
 ```
 
-| Environment Variables      | Description                                                                                                                           |
-| :------------------------- | :------------------------------------------------------------------------------------------------------------------------------------ |
-| `SERVICE_ACCOUNT_KEY_PATH` | The path to your service account key generated in the Firebase console.                                                               |
-| `STORAGE_BUCKET_URL`       | The name of your Firebase storage bucket. E.g. `gs://<PROJECT_NAME>.appspot.com` but omit the `gs://` when entering it in your `.env` |
+| Environment Variables | Description                                                                                                                           |
+| :-------------------- | :------------------------------------------------------------------------------------------------------------------------------------ |
+| `STORAGE_BUCKET_URL`  | The name of your Firebase storage bucket. E.g. `gs://<PROJECT_NAME>.appspot.com` but omit the `gs://` when entering it in your `.env` |
 
 **⚠ Important Note!**
 You should add your service account key (.json file) in your .gitignore to prevent it from being pushed to your repository!
@@ -97,8 +95,9 @@ module.exports = ({ env }) => ({
   upload: {
     provider: "firebase-storage",
     providerOptions: {
-      serviceAccount: require(env("SERVICE_ACCOUNT_KEY_PATH")),
+      serviceAccount: require("./SERVICE_ACCOUNT_KEY_PATH.json"),
       bucketUrl: env("STORAGE_BUCKET_URL"),
+      options: {},
       customBucket: "my-custom-bucket",
       debug: true,
       uploadOptions: {
@@ -117,6 +116,7 @@ By default, all uploads are set to `public`. You can however change those by pas
 | Optional Parameters | Type      | Default Value | Possible Values                                                                                                      |
 | :------------------ | :-------- | :------------ | :------------------------------------------------------------------------------------------------------------------- |
 | `debug`             | _boolean_ | `false`       | `true / false`                                                                                                       |
+| `options`           | _object_  | `{}`          | Refer to [official documentation](https://firebase.google.com/docs/admin/setup)                                      |
 | `customBucket`      | _string_  | `undefined`   | `<BUCKET_NAME>` Only applicable if you use the Spark plan & created a custom bucket                                  |
 | `uploadOptions`     | _object_  | `{}`          | Refer to [official documentation](https://googleapis.dev/nodejs/storage/latest/global.html#CreateWriteStreamOptions) |
 | `deleteOptions`     | _object_  | `{}`          | Refer to [official documentation](https://googleapis.dev/nodejs/storage/latest/File.html#delete)                     |

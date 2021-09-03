@@ -81,7 +81,7 @@ If you need help finding your service account key or bucket name, refer to the [
 
 ## Configurations
 
-Your configuration is passed down to the provider. (e.g: `admin.initializeApp()`). Currently, it only passes in the service account credentials and databaseURL. You can see the complete list of options [here](https://firebase.google.com/docs/database/admin/start).
+The initialization configuration is passed down to the provider via the `options` parameter. (e.g: `admin.initializeApp()`). You can see the complete list of options [here](https://firebase.google.com/docs/database/admin/start).
 
 There are a few additional configurations that you can pass into the provider. You can view all the optional [upload options here](https://googleapis.dev/nodejs/storage/latest/global.html#CreateWriteStreamOptions) and [delete options here](https://googleapis.dev/nodejs/storage/latest/File.html#delete).
 

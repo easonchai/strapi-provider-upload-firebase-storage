@@ -1,6 +1,6 @@
 const plugin = require("../lib/index");
 const consoleSpy = jest.spyOn(console, "log");
-const file = {};
+const file = { path: "test", name: "undefined" };
 
 test("Success uploading and print debug log", () => {
   const instance = plugin.init({
@@ -14,7 +14,7 @@ test("Success uploading and print debug log", () => {
   return instance.upload(file).then((res) => {
     expect(consoleSpy).toHaveBeenCalledWith(
       "UPLOAD: Success!",
-      `https://storage.googleapis.com/${process.env.STORAGE_BUCKET_URL}/undefined`
+      `https://storage.googleapis.com/${process.env.STORAGE_BUCKET_URL}/test/undefined`
     );
   });
 });

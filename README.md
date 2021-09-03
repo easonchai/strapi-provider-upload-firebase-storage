@@ -125,8 +125,10 @@ By default, all uploads are set to `public`. You can however change those by pas
 
 ## Status
 
+[![npm version](https://badge.fury.io/js/strapi-provider-upload-firebase-storage.svg)](https://badge.fury.io/js/strapi-provider-upload-firebase-storage)
 ![CI](https://github.com/easonchai/strapi-provider-upload-firebase/actions/workflows/ci.yml/badge.svg)
 [![Coverage Status](https://coveralls.io/repos/github/easonchai/strapi-provider-upload-firebase-storage/badge.svg?branch=main)](https://coveralls.io/github/easonchai/strapi-provider-upload-firebase-storage?branch=main)
+[![Dependencies](https://status.david-dm.org/gh/easonchai/strapi-provider-upload-firebase-storage.svg)](https://status.david-dm.org/gh/easonchai/strapi-provider-upload-firebase-storage.svg)
 
 <br>
 

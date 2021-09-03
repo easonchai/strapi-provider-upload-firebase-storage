@@ -29,16 +29,6 @@ jobs:
       - name: Test & coverage
         run: yarn coverage
 
-  coveralls:
-    needs: test
-    runs-on: ${{ matrix.os }}
-
-    strategy:
-      matrix:
-        os: [ubuntu-latest]
-        node: [14]
-
-    steps:
       - name: Coveralls GitHub Action
         uses: coverallsapp/github-action@1.1.3
         with:

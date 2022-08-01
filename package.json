@@ -41,7 +41,7 @@
   },
   "homepage": "https://github.com/easonchai/strapi-provider-upload-firebase-storage#readme",
   "dependencies": {
-    "firebase-admin": "^9.11.1"
+    "firebase-admin": "^11.0.1"
   },
   "devDependencies": {
     "dotenv": "^10.0.0",
